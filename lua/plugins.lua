@@ -1,23 +1,23 @@
 vim.pack.add({
---	{src = "https://github.com/folke/tokyonight.nvim"},
---	{src = "https://github.com/Aejkatappaja/sora"},
---	{src = "https://github.com/vague-theme/vague.nvim"},
-	{src = "https://github.com/rebelot/kanagawa.nvim"},
+	--	{src = "https://github.com/folke/tokyonight.nvim"},
+	--	{src = "https://github.com/Aejkatappaja/sora"},
+	--	{src = "https://github.com/vague-theme/vague.nvim"},
+	{ src = "https://github.com/rebelot/kanagawa.nvim" },
 })
 require("kanagawa").setup({})
 
 vim.pack.add({
-	{src = "https://github.com/mason-org/mason.nvim"},
+	{ src = "https://github.com/mason-org/mason.nvim" },
 })
 require("mason").setup({})
 
 vim.pack.add({
-	{src = "https://github.com/nvim-lualine/lualine.nvim"},
+	{ src = "https://github.com/nvim-lualine/lualine.nvim" },
 })
 require("lualine").setup({})
 
 vim.pack.add({
-	{src = "https://github.com/ibhagwan/fzf-lua"},
+	{ src = "https://github.com/ibhagwan/fzf-lua" },
 })
 
 local actions = require("fzf-lua.actions")
@@ -48,7 +48,7 @@ require("fzf-lua").setup({
 })
 
 vim.pack.add({
-	{src = "https://github.com/saghen/blink.cmp", version = vim.version.range("^1")},
+	{ src = "https://github.com/saghen/blink.cmp", version = vim.version.range("^1") },
 })
 require('blink.cmp').setup({
 	fuzzy = { implementation = 'prefer_rust_with_warning' },
@@ -59,14 +59,14 @@ require('blink.cmp').setup({
 		["<C-p>"] = {},
 		["<C-Tab>"] = {},
 		["<S-Tab>"] = {},
-		["<C-y>"] = {"show", "show_documentation", "hide_documentation"},
-		["<Tab>"] = {"select_and_accept"},
-		["<C-k>"] = {"select_prev", "fallback"},
-		["<C-j>"] = {"select_next", "fallback"},
-		["<C-b>"] = {"scroll_documentation_down", "fallback"},
-		["<C-f>"] = {"scroll_documentation_up", "fallback"},
-		["<C-l>"] = {"snippet_forward", "fallback"},
-		["<C-h>"] = {"snippet_backward", "fallback"},
+		["<C-y>"] = { "show", "show_documentation", "hide_documentation" },
+		["<Tab>"] = { "select_and_accept", "fallback" },
+		["<C-k>"] = { "select_prev", "fallback" },
+		["<C-j>"] = { "select_next", "fallback" },
+		["<C-b>"] = { "scroll_documentation_down", "fallback" },
+		["<C-f>"] = { "scroll_documentation_up", "fallback" },
+		["<C-l>"] = { "snippet_forward", "fallback" },
+		["<C-h>"] = { "snippet_backward", "fallback" },
 	},
 	appearance = {
 		use_nvim_cmp_as_default = true,
@@ -75,20 +75,20 @@ require('blink.cmp').setup({
 	completion = {
 		documentation = {
 			auto_show = true,
-			auto_show_delay_ms =  200,
+			auto_show_delay_ms = 200,
 		}
 	},
 	cmdline = {
 		keymap = {
 			preset = 'inherit',
-			['<CR>'] = {"accept_and_enter", "fallback"},
+			['<CR>'] = { "accept_and_enter", "fallback" },
 		}
 	},
-	sources = {default = {"lsp"}}
+	sources = { default = { "lsp" } }
 })
 
 vim.pack.add({
-	{src = "https://github.com/stevearc/oil.nvim"},
+	{ src = "https://github.com/stevearc/oil.nvim" },
 })
 require("oil").setup({
 	view_options = {
@@ -97,14 +97,14 @@ require("oil").setup({
 })
 
 vim.pack.add({
-	{src = "https://github.com/nvim-treesitter/nvim-treesitter"},
+	{ src = "https://github.com/nvim-treesitter/nvim-treesitter" },
 })
 require("nvim-treesitter.config").setup({
 	ensure_installed = { "lua", "rust", "go", "python", "bash", "sql", "markdown", "toml", "yaml", "json" },
 })
 
 vim.pack.add({
-	{src = "https://github.com/lewis6991/gitsigns.nvim"},
+	{ src = "https://github.com/lewis6991/gitsigns.nvim" },
 })
 require("gitsigns").setup({
 	signs = {
@@ -117,7 +117,7 @@ require("gitsigns").setup({
 })
 
 vim.pack.add({
-	{src = "https://github.com/stevearc/conform.nvim"},
+	{ src = "https://github.com/stevearc/conform.nvim" },
 })
 require("conform").setup({
 	formatters_by_ft = {
@@ -135,20 +135,20 @@ require("conform").setup({
 })
 
 vim.pack.add({
-	{src = "https://github.com/windwp/nvim-autopairs"},
+	{ src = "https://github.com/windwp/nvim-autopairs" },
 })
 require("nvim-autopairs").setup({})
 
 vim.pack.add({
-	{src = "https://github.com/folke/todo-comments.nvim"},
+	{ src = "https://github.com/folke/todo-comments.nvim" },
 })
 require("todo-comments").setup({})
 
 vim.pack.add({
-	{src = "https://github.com/folke/which-key.nvim"},
+	{ src = "https://github.com/folke/which-key.nvim" },
 })
 require("which-key").setup({})
 
 vim.pack.add({
-	{src = "https://github.com/mrcjkb/rustaceanvim"},
+	{ src = "https://github.com/mrcjkb/rustaceanvim" },
 })
