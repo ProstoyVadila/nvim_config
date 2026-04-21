@@ -42,6 +42,7 @@ lsp/
 | todo-comments.nvim | Highlight and search TODO/FIXME/HACK comments |
 | which-key.nvim | Keymap hints popup |
 | rustaceanvim | Enhanced Rust LSP integration |
+| neoscroll.nvim | Smooth animated scrolling |
 
 ## Key Mappings
 
@@ -68,3 +69,5 @@ lsp/
 - Format on save is enabled globally via conform.nvim with LSP fallback.
 - System clipboard is shared (`unnamedplus`).
 - Winbar shows the filepath at the top of each window.
+- `<Tab>` in insert mode accepts a completion if the menu is open, otherwise inserts spaces normally.
+- neoscroll uses quadratic easing on `Ctrl+u/d/b/f` and `zt/zz/zb`.
