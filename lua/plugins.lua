@@ -152,3 +152,13 @@ require("which-key").setup({})
 vim.pack.add({
 	{ src = "https://github.com/mrcjkb/rustaceanvim" },
 })
+
+vim.pack.add({
+	{ src = "https://github.com/karb94/neoscroll.nvim" },
+})
+require("neoscroll").setup({
+	mappings = { "<C-u>", "<C-d>", "<C-b>", "<C-f>", "zt", "zz", "zb" },
+	hide_cursor = true,
+	stop_eof = true,
+	easing = "quadratic",
+})
