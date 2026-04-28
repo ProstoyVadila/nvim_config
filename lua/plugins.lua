@@ -128,10 +128,12 @@ require("conform").setup({
 		sh = { "shfmt" },
 		bash = { "shfmt" },
 	},
-	format_on_save = {
-		timeout_ms = 500,
-		lsp_format = "fallback",
-	},
+	format_on_save = function(bufnr)
+		local ft = vim.bo[bufnr].filetype
+		if ft == "go" or ft == "rust" then
+			return { timeout_ms = 500, lsp_format = "fallback" }
+		end
+	end,
 })
 
 vim.pack.add({
